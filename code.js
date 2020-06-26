@@ -66,9 +66,37 @@ class Deck {
 let deck = new Deck();
 deck.createDeck(suits, values);
 deck.shuffle();
-console.log(deck.deal());
+console.log(deck.createDeck(suits, values));
 
 hand = []
+
+`const createCard = (id) =>{
+    let newCard = document.createElement("div");
+    newCard.setAttribute("id", id);
+    newCard.className = 'card';
+    newCard.addEventListener("click", (evt)=>{
+        let cardNode = evt.target
+        //finds the card in the dictionary
+        let card = cards.find(card=>card.id == cardNode.id)
+        console.log(card)  
+        if(card.sideShown == "front"){
+            card.sideShown = "back";
+            cardNode.classList.add("back")
+        } else {
+            card.sideShown = "front";
+            cardNode.classList.remove("back")
+        }
+    })
+    return newCard
+}
+let cards = [['card1',"cat"],['card2',"cat"],['card3',"dog"],['card4','dog']].map(cardArr=>{
+    return {
+        id:cardArr[0],
+        node:createCard(cardArr[0]),
+        sideShown:'front',
+        value:cardArr[1]
+    }
+})`
 
 `let button = document.querySelector("#add-element")
 
