@@ -1,21 +1,21 @@
+@import url('https://fonts.googleapis.com/css?family=Notable&display=swap');
+
 body {
-    font-family: sans-serif;
+    font-family: "Notable", sans-serif;
     background-image: url(background.jpg);
 }
 
 .eddie {
     display:block;
     margin-top: 200px;
-}
+    width: 100%;
+}   
 
 .dealer {
     display:block;
     position: absolute;
     top: 20px;
     right: 758px;
-    
-    
-    
 }
 
 .you {
@@ -29,9 +29,24 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    
-  
 }
+
+.monies {
+    display: grid;
+    grid-template-columns: 1, 1fr;
+    margin-left: 580px;
+    position: relative;
+    bottom: 235px;
+
+}
+
+.tables {
+    display: block;
+    float: right;
+    position: relative;
+    bottom: 750px;
+}
+
 
 .cards {
     display: flex;
@@ -50,9 +65,13 @@ body {
 
 h1,h2 {
     border-bottom:1px solid #333;
-    font-family: sans-serif;
+    font-family: "Notable", sans-serif;
     padding:2px;
     color:rgb(20, 57, 180);
+    word-spacing: 3px;
+    letter-spacing: 2px;
+    text-shadow: 10px 10px 10px black solid;
+    
 }
 
 label {
