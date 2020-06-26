@@ -17,7 +17,116 @@
 
 //animations
 
-const suits = ['Hearts', 'Diamonds', 'Clubs', 'Spades'];
+const button = document.querySelector("#deal", getACard())
+button.addEventListener('click',func)
+
+const button = document.querySelector("#hit", getACard())
+button.addEventListener('click',func)
+
+const button = document.querySelector("#stand", COMPUTER();determineWinner())
+button.addEventListener('click',func)
+
+const button = document.querySelector("#quit")
+button.addEventListener('click',func)
+
+function getTheSuit(){
+
+    suit = Math.floor(Math.random() * 4) + 1
+    if (suit == 1) {
+        return "Hearts";
+    }
+    if (suit == 2) {
+        return "Diamonds";
+    }
+    if (suit == 3) {
+        return "Spades";
+    }
+    if (suit == 4) {
+        return "Diamonds";
+    }
+}
+
+function getACard(turn) {
+    card = Math.floor(Math.random() * 13) + 1
+    suit = getTheSuit();
+    if (card ==1) {
+        return 11;
+    }
+    if (card > 10){
+        return 10;
+    }
+    return card;
+}
+let counter = 0;
+
+function GenerateNewCard(){
+    counter ++;
+    let d = document.getElementsByClassName("HUM").innerHTML = "";
+    let e = document.getElementsByClassName("COMP").innerHTML = "";
+    let f = document.getElementsByClassName("COUNT").innerHTML = counter;
+    let a = parseInt(document.getElementsByClassName("dealeris").value = 0);
+    let res = document.getElementsByClassName("dealeris");
+    let aa = parseInt(document.getElementsByClassName("youare").value = 0);
+    let resa = document.getElementsByClassName("youare");
+    resa.value = a+ getACard("You");
+    res.value = aa + getACard("Dealer");
+}
+
+function COMPUTER(){
+    let a = parseInt(document.getElementsByClassName("dealeris").value);
+    let res = document.getElementsByClassName("dealeris";
+    while(res.value<17) {
+        let b = parseInt(document.getElementsByClassName("dealeris").value);
+        res.value = b + getACard("Dealer");
+    }
+}
+
+function HUMAN(){
+    let a = parseInt(document.getElementsByClassName("youare").value);
+    let res = document.getElementsByClassName("youare");
+    if(res.value>21){
+        whoWonC ++;
+        document.getElementsByClassName("COMPW").innerHTML = whoWonC;
+        let a = document.getElementsByClassName("COMP").innerHTML = "I WIN";
+    }
+}
+
+let whoWonH = 0;
+var whoWonC = 0;
+
+function determineWinner() {
+    let a = parseInt(document.getElementsByClassName("youare").value);
+    let b = parseInt(document.getElementsByClassName("dealeris").value);
+        if (b> 21){
+            whoWonH ++;
+        document.getElementsByClassName("HUMW").innerHTML = whoWonH;
+    let winner = document.getElementsByClassName("HUM").innerHTML = "I WIN";
+        return;
+    }
+    if (a==b){
+        let a = document.getElementsByClassName("HUM").innerHTML = "TIE";
+        let b = document.getElementsByClassName("COMP").innerHTML = "TIE";
+    }
+    if (a>b) {
+        whoWonH ++
+        document.getElementsByClassName("HUMW").innerHTML = whoWonH;
+        let a = document.getElementsByClassName("HUM").innerHTML = "I WIN";
+    }
+    if (b>a){
+        whoWonC ++;
+        document.getElementsByClassName("COMPW").innerHTML = whoWonC;
+        let g = document.getElementsByClassName("COMP").innerHTML = "I WIN";
+    }
+}
+
+
+
+
+
+
+
+
+`const suits = ['Hearts', 'Diamonds', 'Clubs', 'Spades'];
 const values = [2,3,4,5,6,7,8,9,10,'Jack','Queen','King','Ace'];
 
 class Card {
@@ -68,7 +177,7 @@ deck.createDeck(suits, values);
 deck.shuffle();
 console.log(deck.createDeck(suits, values));
 
-hand = []
+hand = []`
 
 `const createCard = (id) =>{
     let newCard = document.createElement("div");
