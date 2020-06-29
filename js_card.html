@@ -1,83 +1,58 @@
 <html>
-    <head>
-        <title>
-            Know When to Hold 'Em'
-        </title>
-        <link rel="stylesheet" href="styles.css" />
-    </head>
+<head>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <meta charset="utf-8" />
+    <title class="title">Know When to Hold Em</title>
+</head>
+<body>
+    <div class="container" id="main">
+        <h1 id="header name">BlackJack Game</h1>
+        <div class="textupdates" id="textUpdates">
+            Press 'New Game' to begin!
 
-    <body>
-        <h1>Hi-Lo There</h1>
-        <div class="eddie">
-            <img src="eddie.jpg" alt="eddie" width="300" height="250">
-        </div>
-        <div class="dealer">
-            <img src="dealer.jpg" alt="dealer">
-        </div>
-        <div class="you">
-            <img src="you.jpg" alt="you">
-        </div>
-        <section class="circle"> <!--create function for buttons-->
-            <div class="circle1">
-                <img src="deal.png" alt="deal">
-            </div>             
-            <div class="circle2">
-                <img src="hit.png" alt="hit">
-            </div>
-            <div class="circle3">
-                <img src="stand.png" alt="stand">
-            </div>
-            <div class="circle4">
-                <img src="quit.png" alt="quit"> 
-            </div>
 
-        </section> 
-        <section>
-            <div class="monies"> <!--create logic and function to bet-->
-                <img src="dollar.png" alt="dollar">
-                <img src="gotfive.png" alt="gotfive">
-            </div>
-        </section> 
-        <section class="tables">
-            <table class="resultat" border="1px solid black">
-                <tr>
-                    <th>HUMAN</th>
-                    <th>COMPUTER</th>
-                    <th>GAMES PLAYED</th>
-                </tr>
-                <tr>
-            <td class="HUM"></td>
-            <td class="COMP"></td>
-            <td class="COUNT"></td>
+        </div> 
+
+        <div class="buttonbox" id="newgame">
+            <button alt="play" id="play">New Game</button>
+        </div>
+        <div class="buttonbox hidden" id="buttonBox">
+            <button alt="hit" id="hit">Hit</button>
+            <button alt="stay" id="stay">Stay</button>
+        </div>
+        <table>
+            <tr>
+                <th id="phand">             
+                    Your Hand
+                </th>
+                <th id="dhand">
+                    Dealer's Hand
+                </th>
             </tr>
-            
-            </table>
-            <br>
-            <h2>STATISTICS</h2>
-            <table class="stat" border="1px solid black">
-                <tr>
-                    <th>HUMAN</th>
-                    <th>COMPUTER</th>
-                </tr>
-                <tr>
-            <td class="HUMW"></td>
-            <td class="COMPW"></td>
-                </tr>
-            </table>
-        </section>           
-        <script src="code.js">
+            <tr>
+                <td id="pcards">No cards dealt yet</td>
+                <td id="dcards">No cards dealt yet</td>
 
-        </script>
-    </body>
+            </tr> 
+        </table>
+    </div>
+    <div id="tracker" class="buttonbox">
+        <p>Wins: 0 Draws: 0 Losses: 0</p>
+    </div>
+    <div class="buttonbox">
+        <p id="stratname">simple strategy suggestion:</p>       
+        <p id="choice" class="bold redcard"></p>
+        <!--<br />
+        <br />
+        <img src="img/stratchart.png" />-->
+    </div>
+
+    <div>
+        <img src="dollar.png" id="dollar">
+    </div>
+    
+
+<script src="code.js"></script>
+</body>
+
 </html>
-
-<!---<legend>Create a new Card</legend>
-<label for="card-title">Title</label>
-<input id="card-title" name="card-title" />
-<label for="card-content">Content</label>
-<textarea id="card-content" name="card-content"  ></textarea>
-<label for="card-extra">Extra</label>
-<textarea id="card-extra" name="card-extra"  ></textarea>
-<button id="add-element">Create Card</button>
-</fieldset>
-<div class="cards" id="cards"></div>  -->

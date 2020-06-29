@@ -1,144 +1,165 @@
 @import url('https://fonts.googleapis.com/css?family=Notable&display=swap');
 
-body {
-    font-family: "Notable", sans-serif;
+.container h1 {
+ 
+}
+
+.title {
+
+}
+
+.container {
+    margin-top: 0px;
+    padding-top: 10px;
+}
+
+body
+{
+    font-family: Arial, sans-serif;
+    font-size: 18px;
     background-image: url(background.jpg);
+    box-shadow: 0 0 8px 8px black inset ;
+    border-radius: 20px;
+   
 }
 
-.eddie {
-    display:block;
-    margin-top: 200px;
-    width: 100%;
-}   
-
-.dealer {
-    display:block;
-    position: absolute;
-    top: 20px;
-    right: 758px;
-}
-
-.you {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 40px;
-}
-
-.circle {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.monies {
-    display: grid;
-    grid-template-columns: 1, 1fr;
-    margin-left: 580px;
-    position: relative;
-    bottom: 235px;
-
-}
-
-.tables {
-    display: block;
-    float: right;
-    position: relative;
-    bottom: 750px;
-}
-
-
-.cards {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.card {
-    padding:10px;
-    margin:10px;
-    width:100%;
-    max-width: 350px;
-    box-shadow:6px 6px 4px 4px rgba(0.2,0.2,0.2, 0.1);
-    border-radius: 4px;
-    margin:20px;
-}
-
-h1,h2 {
-    border-bottom:1px solid #333;
+h1{
+    text-align: center;
+    color: #2336ac;
     font-family: "Notable", sans-serif;
-    padding:2px;
-    color:rgb(20, 57, 180);
-    word-spacing: 3px;
-    letter-spacing: 2px;
-    text-shadow: 10px 10px 10px black solid;
-    
+    letter-spacing: 5px;
+    padding-bottom: 10px;
+    border: 1px black solid;
+    border-width: medium;
+    background-color: black;
+  
 }
-
-label {
-    display: block;
-    font-size:1rem;
-    font-weight:bold;
-    
-}
-
-input, textarea {
-    padding:6px;
-    border-radius: 4px;
-    border:1px solid #999;
-    font-size:1.2rem;
-    width:300px;
-}
-
-input:focus, textarea:focus {
-    background-color: rgb(226, 248, 241);
-    border:1px solid #ffddff;
-}
-
-legend {
-    font-weight:bold;
-}
-
-textarea {
-    resize: none;
-    width:300px;
-    height:60px;
-    font-family: sans-serif;
-}
-
-button {
-    display: block;
-    padding:6px;
-    font-size:1.2rem;
-}
-
-.extra {
-    border-radius: 4px;
-    border:1px solid rgb(14, 59, 155);
-    padding:4px;
-    background:rgb(225, 232, 255);
-}
-
-.content {
-    display:flex;
-    flex-wrap:wrap;
-}
-
-.error {
-    padding:4px;
-    border-radius:3px;
-    border:1px solid red;
-}
-
-.error span {
-    padding:4px 6px;
-    color:white;
-    font-weight:bold;
-    background-color: red;
-    cursor: pointer;
-    border-radius: 50%; 
-    margin:0 4px;
-}
-
-.error p {
+span {
+    opacity: 0;
+    transition: all 0.5s ease;
+    transform: translateY(50px);
     display: inline-block;
 }
+
+span.fade {
+    opacity: 1;
+    transform: translateY(0px);
+}
+
+
+table
+{
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+    height: 200px;
+    width: 600px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+    display: table;
+    padding: 8px 8px 8px 8px;
+}
+
+th
+{
+    color: #2336ac;
+}
+
+div.buttonbox
+{
+    width: 40%;
+    /*background-color: #717171;*/
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    padding: 8px 8px 8px 8px
+}
+
+div.textupdates
+{
+    width: 600px;
+    height: 60px;
+    background-color: #eaeaea;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    padding: 8px 8px 8px 8px;
+    font-weight: bold;
+    /*font-size: larger;*/
+    margin-top: 20px;
+    margin-bottom: 6px;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+}
+
+.cool
+{
+    background-color: #ff0000;
+}
+
+.hot
+{
+    background-color: #2336ac;
+}
+
+.hidden
+{
+    visibility: hidden;
+}
+
+.blackcard
+{
+    font-weight: bold;      
+}
+
+.bold
+{
+    font-weight: bold;
+}
+
+.redcard
+{
+    
+}
+
+li
+{
+    list-style-type: none;
+    
+}
+
+button
+{
+    font-size: 18px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+    margin: 10px 0px 10px 0px;
+    padding: 10px;
+    border: 2px solid #000000; /* black */    
+    font-weight: bold;
+    border-radius: 6px;
+}
+
+button#newgame
+{
+    background-color: green;
+    width: 140px;
+}
+
+
+button#hit
+{
+    background-color: green;
+    width: 70px;
+}
+
+button#stay
+{
+    background-color: red;
+    width: 70px;
+}
+
+#tracker
+{   
+    border-top: 3px solid black;
+    border-bottom: 2px solid black;
+}
+
