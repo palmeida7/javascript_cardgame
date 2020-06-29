@@ -60,6 +60,14 @@ function complete() {
     timer = null;
 }
 
+function playWav () {
+    let audio = new Audio("chip.wav");
+    audio.play()
+}
+
+let buttonChip = document.getElementById("coinage");
+buttonChip.addEventListener('click', playWav);
+
 // Object Constructor for a card. !!! ALWAYS USE NEW WHEN MAKING A NEW CARD!!!
 function card(suit, value, name) {
     this.suit = suit; // string of c/d/h/s

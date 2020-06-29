@@ -190,3 +190,30 @@ button#stay
     top: 35px;
     right: 1150px;
 }
+
+@media screen and (max-width: 1369px) {
+    .homepage {
+        width:100%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .container{
+        width:100%;
+    }
+    #button{
+        width:100%;
+
+    }
+    .you img {
+        display: none;
+    }
+}
+@media screen and (max-width: 400px) {
+    .container{
+        width:400px;
+    }
+    .you img {
+        display: none;
+    }
+}
