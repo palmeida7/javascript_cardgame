@@ -1,23 +1,4 @@
-// blackjack.js
-// A simple 'vanilla' JavaScript implementation of blackjack
 
-// Know Issues:
-// "Simple stratgey" is a massive oversimplification
-
-//console.log("Script link success!");
-
-// Object creation helper function from JavaScript: The Good Parts
-/*
-if (typeof Object.create !== 'function') {
-    Object.create = function (o) {
-        var F = function () { };
-        F.prototype = o;
-        return new F();
-    }
-};*/
-
-// an object to hold all of the variables for the blackjack app
-// to avoid global variable drama
 var jsbApp = {};
 
 // Store important elements in variables for later manipulation
