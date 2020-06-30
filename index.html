@@ -1,0 +1,71 @@
+<html class="homepage">
+<head>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title class="title">Know When to Hold Em</title>
+</head>
+<body>
+    <div class="container" id="main">
+        <h1 id="header name">BlackJack Game</h1>
+        <div class="textupdates" id="textUpdates">
+            Press 'New Game' to begin!
+
+
+        </div> 
+
+        
+        <div class="buttonbox" id="newgame">
+            <button alt="play" id="play">New Game</button>
+        </div>
+        <div class="buttonbox hidden" id="buttonBox">
+            <button alt="hit" id="hit">Hit</button>
+            <button alt="stay" id="stay">Stay</button>
+        </div>
+        <table>
+            <tr>
+                <th id="phand">             
+                    Your Hand
+                </th>
+                <th id="dhand">
+                    Dealer's Hand
+                </th>
+            </tr>
+            <tr>
+                <td id="pcards">No cards dealt yet</td>
+                <td id="dcards">No cards dealt yet</td>
+
+            </tr> 
+        </table>
+    </div>
+    <div id="tracker" class="buttonbox">
+        <h3>Your Stats</h3>
+        <p>Wins: 0 Draws: 0 Losses: 0</p>
+        
+    </div>
+    <div class="buttonbox">
+        <p id="stratname">simple strategy suggestion:</p>       
+        <p id="choice" class="bold redcard"></p>
+        <canvas id="myChart"></canvas>
+    </div>
+
+    <div class="coinage" id="coinage" type="button">
+        <img src="dollar.png" id="dollar">
+        <img src="gotfive.png" id="gotfive">
+    </div>
+    <section>
+        <div class="you">
+            <img src="you.jpg" id="you" width="250" height="250">
+        </div>
+        <div class="eddie">
+            <img src="eddie.jpg" id="eddie" width="250" height="250">
+        </div>
+        <div class="dealer">
+            <img src="dealer.jpg" id="dealer" width="70" height="70">
+        </div>
+    </section>
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+<script src="code.js"></script>
+</body>
+
+</html>

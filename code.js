@@ -68,12 +68,76 @@ function playWav () {
 let buttonChip = document.getElementById("coinage");
 buttonChip.addEventListener('click', playWav);
 
+
 // Object Constructor for a card. !!! ALWAYS USE NEW WHEN MAKING A NEW CARD!!!
 function card(suit, value, name) {
     this.suit = suit; // string of c/d/h/s
     this.value = value; // number 1 - 10
     this.name = name; // string of the full card name
 };
+
+
+// function cardCount() {       
+//     let count = 0;
+//     for (i=0; i<count; i++){
+//         console.log(count)
+//     }
+//     switch (){
+//         case 2:
+//         case 3:
+//         case 4:
+//         case 5:
+//         case 6:
+//         count++;       
+//         break;       
+
+//         case 7:
+//         case 8:
+//         case 9:
+//         count = count;       
+//         break;
+
+//         case 10:
+//         case "Jack":
+//         case "Queen":
+//         case "King":
+//         case "Ace":
+//         count--;       
+//         break;
+//     }
+
+//     if (count>0){
+//     return count + " Bet";
+//     }
+//     else return count + " Hold";
+//     return cardCount();
+// }
+// cardCount();
+
+// let myChart = document.getElementById('myChart').getContext('2d');
+
+// let recChart = new Chart(myChart, {
+//     type:'pie',
+//     data:{
+//         labels:['Wins', 'Draws', 'Losses'],
+//         datasets:[{
+//             label:'Record',
+//             data:[
+//                 100,
+//                 200,
+//                 40
+
+//             ],
+//             backgroundColor:[
+//                 'rgba(255,99,132,0.6)',
+//                 'rgba(54, 162, 235, 0.6)',
+//                 'rgba(255,206,86,0.6)'
+//             ],
+//         }]
+//     },
+//     options:{}
+// });
+
 
 
 var newGame = function () {
@@ -86,7 +150,7 @@ var newGame = function () {
     jsbApp.playerHand = [];
     jsbApp.dealerHand = [];
     jsbApp.gameStatus = 0;
-
+    
     // Create the new deck
     jsbApp.deck = createDeck();
 
@@ -415,6 +479,31 @@ var track = function () {
     jsbApp.newgame.classList.remove("hidden");
     jsbApp.buttonBox.classList.add("hidden");
 }
+// console.log(jsbApp.gameStatus);
+
+// let myChart = document.getElementById('myChart').getContext('2d');
+
+// let recChart = new Chart(myChart, {
+//     type:'pie',
+//     data:{
+//         labels:['Wins', 'Draws', 'Losses'],
+//         datasets:[{
+//             label:'Record',
+//             data:[
+//                 jsbApp.wins,
+//                 jsbApp.draws,
+//                 jsbApp.losses
+                
+//             ],
+//             backgroundColor:[
+//                 'rgba(255,99,132,0.6)',
+//                 'rgba(54, 162, 235, 0.6)',
+//                 'rgba(255,206,86,0.6)'
+//             ],
+//         }]
+//     },
+//     options:{}
+// });
 
 // check the player hand for an ace
 var softCheck = function (hand) {    
@@ -485,4 +574,7 @@ var advise = function () {
         console.log("Error: Player's hand was " + playerTotal + " and dealer's faceup was " + dealerUp + ".");
     }
     return;
+
+    
 }
+
