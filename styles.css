@@ -1,12 +1,18 @@
 @import url('https://fonts.googleapis.com/css?family=Notable&display=swap');
 
-.container h1 {
+.chart-holder {
+    width:300px;
+    display: block;
+    margin-left: 230px;
+}
+
+/* .container h1 {
  
 }
 
 .title {
 
-}
+} */
 
 .container {
     margin-top: 0px;
@@ -116,10 +122,10 @@ div.textupdates
     font-weight: bold;
 }
 
-.redcard
+/* .redcard
 {
     
-}
+} */
 
 li
 {
@@ -191,7 +197,7 @@ button#stay
     right: 1150px;
 }
 
-@media screen and (max-width: 1369px) {
+/* @media screen and (max-width: 1369px) {
     .homepage {
         width:100%;
     }
@@ -216,8 +222,5 @@ button#stay
     .you img {
         display: none;
     }
-}
+} */
 
-.myChart {
-    
-}

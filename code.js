@@ -68,6 +68,14 @@ function playWav () {
 let buttonChip = document.getElementById("coinage");
 buttonChip.addEventListener('click', playWav);
 
+function newWave () {
+    let audio = new Audio("DEAL.wav");
+    audio.play()
+}
+
+// let buttonN = document.getElementById(".#play");
+// buttonN.addEventListener('click', newWave);
+
 
 // Object Constructor for a card. !!! ALWAYS USE NEW WHEN MAKING A NEW CARD!!!
 function card(suit, value, name) {
@@ -114,29 +122,29 @@ function card(suit, value, name) {
 // }
 // cardCount();
 
-// let myChart = document.getElementById('myChart').getContext('2d');
+let myChart = document.getElementById('myChart').getContext('2d');
 
-// let recChart = new Chart(myChart, {
-//     type:'pie',
-//     data:{
-//         labels:['Wins', 'Draws', 'Losses'],
-//         datasets:[{
-//             label:'Record',
-//             data:[
-//                 100,
-//                 200,
-//                 40
+let recChart = new Chart(myChart, {
+    type:'pie',
+    data:{
+        labels:['Wins', 'Draws', 'Losses'],
+        datasets:[{
+            label:'Record',
+            data:[
+                0,
+                0,
+                0
 
-//             ],
-//             backgroundColor:[
-//                 'rgba(255,99,132,0.6)',
-//                 'rgba(54, 162, 235, 0.6)',
-//                 'rgba(255,206,86,0.6)'
-//             ],
-//         }]
-//     },
-//     options:{}
-// });
+            ],
+            backgroundColor:[
+                'rgba(255,99,132,0.6)',
+                'rgba(54, 162, 235, 0.6)',
+                'rgba(255,206,86,0.6)'
+            ],
+        }]
+    },
+    options:{}
+});
 
 
 
@@ -475,6 +483,11 @@ var tie = function () {
 
 // update the win/loss counter
 var track = function () {
+    let data = recChart.data.datasets[0].data;
+    data[0] = jsbApp.wins;
+    data[1] = jsbApp.draws;
+    data[2] = jsbApp.losses;
+    recChart.update();
     jsbApp.tracker.innerHTML = "<p>Wins: " + jsbApp.wins + " Draws: " + jsbApp.draws + " Losses: " + jsbApp.losses + "</p>";
     jsbApp.newgame.classList.remove("hidden");
     jsbApp.buttonBox.classList.add("hidden");
